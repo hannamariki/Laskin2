@@ -3,7 +3,7 @@ import React, { useState } from 'react';
 import {SafeAreaView, StyleSheet, TextInput, Button, View, FlatList, Text} from 'react-native'; 
 
 export default function App() { 
-  const [result, setResult] = useState('tähän tulee tulos');
+  const [result, setResult] = useState(' '); //tähän tulee tulos
   const [number1, setNumber1] = useState('');
   const [number2, setNumber2] = useState('');
   const [history, setHistory] = useState([]); //lisätään lista
@@ -21,7 +21,7 @@ export default function App() {
     const num2 = parseInt(number2) || 0; 
     const erotus = num1 - num2;
     setResult(erotus.toString());
-    setHistory([...history, { key: `${number1} - ${number2} = ${erotus}` }]);//lisätään listaan tulos
+    setHistory([...history, { key: `${number1} - ${number2} = ${erotus}` }]);//lisätään listaan erotus
   };
 
   return ( 
